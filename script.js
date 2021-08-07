@@ -1,30 +1,20 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+var passwordEl = document.querySelector("#password");
+var btngenerateEl = document.querySelector("#generate");
+var btncopyEl = document.querySelector("#copy");
 
-var UPPER = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-var lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-var Special = ["#","$","%","&","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]"];
-var Numbers = [0,1,2,3,4,5,6,7,8,9];
+btngenerateEl.addEventListener("click", function () {
+   
+    //Prompt to get desired character length
+    var charLength = prompt("How many characters would you like your new password to be? Pick a number between 8 and 128.");
 
-var UPPERValid = confirm("Would you like your password to contain uppercase letters?");
-var lowerValid = confirm("Would you like your password to contain lowercase letters?");
-var SpecialValid = confirm("Would you like your password to contain special character symbols?");
-var NumbersValid = confirm("Would you like your password to contain numbers?");
+    if ((charLength >= 8) && (charLength <= 128)) {
 
-
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = "";
-  password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
- 
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+        let symbols = "!'#$%&()*+-./;:<>=?@[]{}~^";
+        let numbers = "0123456789";
+        let lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
+        let newPassword = "";
+
+})
