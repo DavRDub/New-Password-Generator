@@ -71,3 +71,26 @@ function determineLength(){
       }
       return numberCheck;
   }
+
+  function determineSpecial(){
+    specialCheck = prompt("Do you want to include special characters in your password? \n(Yes or No)");
+      specialCheck = specialCheck.toLowerCase();
+  
+      if (specialCheck === null || specialCheck === ""){
+        alert("Please answer Yes or No");
+        determineSpecial();
+  
+      }else if (specialCheck === "yes" || specialCheck ==="y"){
+        specialCheck = true;
+        return specialCheck;
+  
+      }else if (specialCheck === "no" || specialCheck ==="n"){
+        specialCheck = false;
+        return specialCheck;
+      
+      }else {
+        alert("Please answer Yes or No");
+        determineSpecial();
+      }
+      return specialCheck;
+  }
